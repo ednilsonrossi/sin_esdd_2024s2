@@ -1,6 +1,6 @@
 /**
  * Autor..: Ednilson Rossi
- * Contato: ednilsonrossi@ifsp.edu.br
+ * Contato: ednilsonrossi@ifsp.edu.br 
 */
 
 /*	uteis.h	*/
