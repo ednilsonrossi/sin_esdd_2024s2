@@ -1,52 +1,40 @@
-# Prerequisites
-*.d
+# Arquivos e diretórios do Visual Studio Code
+.vscode/
+*.code-workspace
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Diretório output
+/output/
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
+# Arquivos de build e binários de programas em C
 *.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+*.exe
+*.obj
+*.o
+*.a
+*.so
+*.dll
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# Diretórios de build comuns
+/build/
+/bin/
+/debug/
+/release/
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Arquivos temporários e de logs
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Arquivos gerados pelo compilador
+*.d
+*.gcda
+*.gcno
+*.gcov
+
+# Arquivos específicos do sistema operacional
+.DS_Store        # macOS
+Thumbs.db        # Windows
+ehthumbs.db      # Windows
