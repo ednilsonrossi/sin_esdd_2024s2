@@ -67,9 +67,6 @@ T_Racional entradaRacional() {
 }
 
 void simplificarRacional(T_Racional racionalPtr) {
-    /*int vMdc = mdc( (*racionalPtr)->numerador, (*racionalPtr)->denominador );
-    (*racionalPtr)->numerador = (*racionalPtr)->numerador / vMdc;
-    (*racionalPtr)->denominador = (*racionalPtr)->denominador / vMdc;*/
     int vMdc = mdc(racionalPtr->numerador, racionalPtr->denominador );
     racionalPtr->numerador = racionalPtr->numerador / vMdc;
     racionalPtr->denominador = racionalPtr->denominador / vMdc;
