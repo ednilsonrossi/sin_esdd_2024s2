@@ -8,39 +8,39 @@ int main() {
 
     fila = init(5);
 
-    printf("%s\n", enqueue(fila, 1) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 2) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 3) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 4) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 5) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 6) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 7) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 8) ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'A') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'B') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'C') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'D') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'E') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'F') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'G') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'H') ? "Entrou" : "Não entrou");
 
     while(!is_empty(fila)) {
         dequeue(fila, &saiu);
-        printf("Saiu: %d\n", saiu);
+        printf("Saiu: %c\n", saiu);
     }
 
-    printf("%s\n", enqueue(fila, 1) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 2) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 3) ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'A') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'B') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'C') ? "Entrou" : "Não entrou");
     if (dequeue(fila, &saiu))       
-        printf("Saiu: %d\n", saiu);
+        printf("Saiu: %c\n", saiu);
     if (dequeue(fila, &saiu))       
-        printf("Saiu: %d\n", saiu);
+        printf("Saiu: %c\n", saiu);
     if (dequeue(fila, &saiu))       
-        printf("Saiu: %d\n", saiu);
+        printf("Saiu: %c\n", saiu);
     if (dequeue(fila, &saiu))       
-        printf("Saiu: %d\n", saiu);
+        printf("Saiu: %c\n", saiu);
     if (dequeue(fila, &saiu))       
-        printf("Saiu: %d\n", saiu);
+        printf("Saiu: %c\n", saiu);
 
-    printf("%s\n", enqueue(fila, 4) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 5) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 6) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 7) ? "Entrou" : "Não entrou");
-    printf("%s\n", enqueue(fila, 8) ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'D') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'E') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'F') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'G') ? "Entrou" : "Não entrou");
+    printf("%s\n", enqueue(fila, 'H') ? "Entrou" : "Não entrou");
 
     destroy(fila);
     return 0;

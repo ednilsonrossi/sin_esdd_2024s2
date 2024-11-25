@@ -3,7 +3,7 @@
 
 typedef struct queue* T_Queue;
 
-typedef int T_Info;
+typedef char T_Info;
 
 T_Queue init(int max_size);
 
