@@ -6,6 +6,7 @@ struct setOfProjects {
     int max_size;
 };
 
+
 Set init() {
     Set mySet = malloc(sizeof(struct setOfProjects));
     if (mySet != NULL) {
@@ -14,7 +15,7 @@ Set init() {
             mySet->size = 0;
             mySet->max_size = DEFAULT_SET_SIZE;
         } else {
-            free(mySet);
+            free (mySet);
             mySet = NULL;
         }
     }
@@ -27,7 +28,7 @@ bool insert(Set mySet, Info element) {
         if (new_arr == NULL) {
             return false;
         }
-        for (int i = 0; i < mySet->max_size; i++) {
+        for (int i = 0; i < mySet->size; i++) {
             new_arr[i] = mySet->arr_elements[i];
         }
         free(mySet->arr_elements);

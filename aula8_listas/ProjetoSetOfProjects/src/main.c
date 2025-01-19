@@ -17,7 +17,7 @@ int main(int argc, char const *argv[]) {
     insert(projetos, create(901, 1000.0));
     insert(projetos, create(923, 10000.0));
 
-    for (int i = 0; i < size(projetos); i++) {
+    for (int i=0; i < size(projetos); i++) {
         printf("%s \n", toString(getAt(projetos, i)));
     }
 

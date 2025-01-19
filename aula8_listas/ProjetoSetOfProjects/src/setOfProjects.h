@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include "mecProject.h"
+
 #define DEFAULT_SET_SIZE 5
 
 typedef struct setOfProjects* Set;

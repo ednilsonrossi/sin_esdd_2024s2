@@ -1,6 +1,7 @@
 #include "mecProject.h"
 #include <stdio.h>
-#define DEFAULT_STRING_SIZE 90
+
+#define DEFAUL_STRING_SIZE 90
 
 struct mec_project {
     int number;
@@ -9,13 +10,11 @@ struct mec_project {
 
 Project create(int number, double value) {
     Project pj;
-
     pj = malloc(sizeof(struct mec_project));
     if (pj != NULL) {
         pj->number = number;
         pj->value = value;
     }
-
     return pj;
 }
 
@@ -25,7 +24,12 @@ double getProjectValue(Project project) {
 
 char* toString(Project project) {
     char* string;
-    string = malloc(sizeof(char) * DEFAULT_STRING_SIZE);
-    snprintf(string, DEFAULT_STRING_SIZE, "Projeto [numero : %d, valor : %.2f]", project->number, project->value);
+    string = malloc(sizeof(char) * DEFAUL_STRING_SIZE);
+    snprintf(string, 
+        DEFAUL_STRING_SIZE, 
+        "Projeto [número : %d, valor : %.2f]", 
+        project->number, 
+        project->value
+    );
     return string;
 }
