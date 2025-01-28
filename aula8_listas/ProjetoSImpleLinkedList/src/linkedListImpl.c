@@ -71,6 +71,50 @@ bool insertAtBeginningList(List list, Info element) {
     return false;
 }
 
+bool insertAtPositionList(List list, int position, Info element) {
+    bool inseriu = false;
+    NodePtr node;
+
+    if (list != NULL) {
+
+        node = createNode();
+        setInfo(node, element);
+        setNext(node, NULL);
+
+        // 1º caso: lista vazia
+        if (isEmptyList(list)) {
+            list->head = node;
+            list->listSize += 1;
+            inseriu = true;
+        } else {
+            if (position <= 0) {
+                setNext(node, list->head);
+                list->head = node;
+                list->listSize += 1;
+                inseriu = true;
+            } else {
+                int contador = 0;
+                NodePtr imigrante, trump;
+                trump = NULL;
+                imigrante = list->head;
+
+                while(contador < position  && imigrante != NULL) {
+                    trump = imigrante;
+                    imigrante = getNext(imigrante);
+                    contador += 1;
+                }
+
+                setNext(node, imigrante);
+                setNext(trump, node);
+                list->listSize += 1;
+                inseriu = true;
+            }
+        }
+    }
+   
+    return inseriu;
+}
+
 Info getInfoAt(List list, int position) {
     NodePtr andarilho;
     int contador;
@@ -178,7 +222,24 @@ bool removeAt(List list, int position) {
     return removeu;
 }
 
+int countKey(List list, Info key) {
+    int contador = 0;
 
+    if (list != NULL) {
+        if (!isEmptyList(list)) {
+            NodePtr turista = list->head;
+
+            while (turista != NULL) {
+                if (getInfo(turista) == key) {
+                    contador += 1;
+                }
+                turista = getNext(turista);
+            }
+        }
+    }
+
+    return contador;
+}
 
 
 

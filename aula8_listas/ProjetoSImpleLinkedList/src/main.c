@@ -4,7 +4,7 @@
 int main() {
     Info element;
     List myList = createList();
-    List emptyList = createList();
+    //List emptyList = createList();
 
     insertList(myList, 5);
     insertList(myList, 10);
@@ -29,7 +29,7 @@ int main() {
     //printf("Existe 12? %d\n", hasElement(myList, 12));
     //printf("Existe 35 na lista vazia? %d\n", hasElement(emptyList, 35));
 
-    removeAt(myList, 0);
+    /*removeAt(myList, 0);
     removeAt(myList, 9);
     removeAt(myList, 4);
     printf("Lista: \n");
@@ -37,7 +37,7 @@ int main() {
         element = getInfoAt(myList, i);
         printf("[%d]: %d\n", i, element);
     }
-
+    */
     destroyList(myList);
     myList = NULL;
 
